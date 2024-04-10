@@ -8,33 +8,33 @@ dotenv.config();
     //change database name and host when using vm
 const node1 = new Sequelize(
     'stadvdb_mco2', 
-    process.env.SERVER0_USER,
-    process.env.SERVER0_PASS,
+    'server0',
+    'password',
     {
         host: 'ccscloud.dlsu.edu.ph', 
-        port: process.env.SERVER0_PORT,
+        port: '20087',
         dialect: 'mysql'
     }
 );
 
 const node2 = new Sequelize(
     'stadvdb_mco2',
-    process.env.SERVER1_USER,
-    process.env.SERVER1_PASS,
+    'server1',
+    'password',
     {
         host: 'ccscloud.dlsu.edu.ph', 
-        port: process.env.SERVER1_PORT,
+        port: '20088',
         dialect: 'mysql'
     }
 );
 
 const node3 = new Sequelize(
     'stadvdb_mco2',
-    process.env.SERVER2_USER,
-    process.env.SERVER2_PASS,
+    'server2',
+    'password',
     {
         host: 'ccscloud.dlsu.edu.ph', 
-        port: process.env.SERVER2_PORT,
+        port: '20089',
         dialect: 'mysql'
     }
 );
