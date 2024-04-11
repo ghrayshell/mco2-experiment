@@ -60,9 +60,6 @@ const db_queries = {
                 console.log("MESSAGE: Nodes are unavailable.");
             }
         }//ENDELSE 
-
-        //const [rows, fields] = await node1.query('SELECT * FROM appointments ' + indexQuery);
-        
     },
 
     //Insert the values to the database.
@@ -115,10 +112,6 @@ const db_queries = {
                 console.log("MESSAGE: Nodes are unavailable.");
             }
         }//ENDELSE
-
-        //TEST: Test to insert to query.
-        //var result = await node1.query(sqlQuery);
-        //return result;
     },
 
     //Delete a row from the database.
@@ -169,14 +162,7 @@ const db_queries = {
             {
                 console.log("MESSAGE: Nodes are unavailable.");
             }
-        }//ENDELSE       
-
-        /*
-        //TEST: Test to delete query.
-        console.log("MESSAGE: Deleting index " + apptid);
-        var result = await node1.query('DELETE FROM appointments WHERE apptid = ?', [apptid]);
-        return result;
-        */
+        }//ENDELSE
     },
 
     //Get a row based on the selected index.
@@ -235,10 +221,7 @@ const db_queries = {
                 console.log("MESSAGE: Nodes are unavailable.");
             }
             
-        }//ENDELSE 
-
-        //const [rows, fields] = await node1.query('SELECT * FROM appointments WHERE apptid = ?', [apptid]);
-        //return rows;
+        }//ENDELSE
     },
 
     //Update the row from the Databasee.

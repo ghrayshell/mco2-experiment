@@ -122,20 +122,6 @@ const controller = {
         {
             console.log(error);
         }
-        /*
-        //TEST: Simple Add Appointment to Database code. 
-        console.log(pxid, queuedate, hospitalname, city, regionname, type, status);
-        try {
-            console.log(sqlQuery);
-            const result = await dbquery.insertQuery(sqlQuery, regionname, 1)
-            if (result) {
-                console.log("MESSAGE: Added Appointment!");
-            }
-            else {
-                console.log("MESSAGE: Add Transaction Failed");
-            }
-        } catch (err) { }
-        */
 
         res.redirect('/');
     },
