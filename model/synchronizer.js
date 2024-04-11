@@ -12,12 +12,12 @@ const synchronizer_utils = {
         //Sync central node with the fragments
             if(await node_utils.pingNode(1)){
                 //Select the immediate id of the node_log
-                var sqlQuery1 = (`SELECT MAX(id) as max_id FROM logtable_2`); 
-                var sqlQuery2 = (`SELECT MAX(id) as max_id FROM logtable_3`); 
-                var sqlQuery3 = (`SELECT MAX(id) as max_id FROM log_table`);
+                var sqlQuery1 = (`SELECT MAX(pxid) as max_id FROM buongPINAS`); 
+                var sqlQuery2 = (`SELECT MAX(pxid) as max_id FROM buongPINAS`); 
+                var sqlQuery3 = (`SELECT MAX(pxid) as max_id FROM buongPINAS`);
 
                 //Do transaction with the immediate id.
-                const mcentralresult_2 = await transaction_utils.queryTransaction(1, sqlQuery1); //Central Node transact with log2_table
+                const mcentralresul_2 = await transaction_utils.queryTransaction(1, sqlQuery1); //Central Node transact with log2_table
                 const mcentralresult_3 = await transaction_utils.queryTransaction(1, sqlQuery2); //Central Node transact with log3_table
                 const mfragresult_2 = await transaction_utils.queryTransaction(2, sqlQuery3); //Node 2 transact with log_table
                 const mfragresult_3 = await transaction_utils.queryTransaction(3, sqlQuery3); //Node 3 transact with log_table
@@ -189,8 +189,8 @@ const synchronizer_utils = {
         try{
             if(await node_utils.pingNode(1))
             {
-                var sqlQuery1 = (`SELECT MAX(id) as max_id FROM logtable_` + nodenum);
-                var sqlQuery2 = (`SELECT MAX(id) as max_id FROM log_table`); 
+                var sqlQuery1 = (`SELECT MAX(pxid) as max_id FROM logtable_` + nodenum);
+                var sqlQuery2 = (`SELECT MAX(pxid) as max_id FROM log_table`); 
 
                 const mcentralresult = await transaction_utils.queryTransaction(1, sqlQuery1);
                 const mfragresult = await transaction_utils.queryTransaction(nodenum, sqlQuery2);

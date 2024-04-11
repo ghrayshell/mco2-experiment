@@ -6,7 +6,7 @@ const node1 = mysql.createPool({
     user: "server0",
     //port: 20087,
     password: "password",
-    database: 'allPH',
+    database: 'appointments',
 });
 
 const node2 = mysql.createPool({
