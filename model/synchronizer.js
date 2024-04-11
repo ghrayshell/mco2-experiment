@@ -12,9 +12,9 @@ const synchronizer_utils = {
         //Sync central node with the fragments
             if(await node_utils.pingNode(1)){
                 //Select the immediate id of the node_log
-                var sqlQuery1 = (`SELECT MAX(pxid) as max_id FROM buongPINAS`); 
-                var sqlQuery2 = (`SELECT MAX(pxid) as max_id FROM buongPINAS`); 
-                var sqlQuery3 = (`SELECT MAX(pxid) as max_id FROM buongPINAS`);
+                var sqlQuery1 = (`SELECT MAX(pxid) as max_id FROM log_table2`); 
+                var sqlQuery2 = (`SELECT MAX(pxid) as max_id FROM log_table3`); 
+                var sqlQuery3 = (`SELECT MAX(pxid) as max_id FROM log_table`);
 
                 //Do transaction with the immediate id.
                 const mcentralresul_2 = await transaction_utils.queryTransaction(1, sqlQuery1); //Central Node transact with log2_table
