@@ -17,7 +17,7 @@ const synchronizer_utils = {
                 var sqlQuery3 = (`SELECT MAX(pxid) as max_id FROM log_table`);
 
                 //Do transaction with the immediate id.
-                const mcentralresul_2 = await transaction_utils.queryTransaction(1, sqlQuery1); //Central Node transact with log2_table
+                const mcentralresult_2 = await transaction_utils.queryTransaction(1, sqlQuery1); //Central Node transact with log2_table
                 const mcentralresult_3 = await transaction_utils.queryTransaction(1, sqlQuery2); //Central Node transact with log3_table
                 const mfragresult_2 = await transaction_utils.queryTransaction(2, sqlQuery3); //Node 2 transact with log_table
                 const mfragresult_3 = await transaction_utils.queryTransaction(3, sqlQuery3); //Node 3 transact with log_table
