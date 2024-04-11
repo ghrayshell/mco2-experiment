@@ -42,8 +42,8 @@ hbs.registerHelper("formatDate", function(queuedate) {
 
 //configure the .env variables
 dotenv.config();
-var hostname = process.env.HOSTNAME;
-var port = process.env.PORT;
+var hostname = 'localhost';
+var port = 3000;
 var nodenum = process.env.NODENUM;
 
 app.set("view engine", "hbs")
