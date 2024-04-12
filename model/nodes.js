@@ -10,7 +10,7 @@ const node1 = mysql.createPool({
 });
 
 const node2 = mysql.createPool({
-    host:  '10.2.0.88',
+    host: '10.2.0.88',
     //port: 20088,
     user: "server1",
     password: "password",
@@ -31,11 +31,11 @@ const node_utils = {
             case 1: 
                 try { 
                     let val = await node1.query('SELECT 1 AS solution'); 
-                    console.log(val[0][0].solution);
+                    console.log(`Successfully pinged Node ${node}: ${val[0][0].solution}`);
                     return true;
                 }
                 catch (error) { 
-                    console.log(`ERROR: SServer is unreachable. Failed to connect to Node ${node}`); 
+                    console.log(`ERROR: Server is unreachable. Failed to connect to Node ${node}`); 
                     console.log(error);
                 }
                 break;
@@ -43,11 +43,11 @@ const node_utils = {
             case 2: 
                 try {
                     let val = await node2.query('SELECT 2 AS solution');
-                    console.log(val[0][0].solution);
+                    console.log(`Successfully pinged Node ${node}: ${val[0][0].solution}`);
                     return true;
                 }
                 catch (error) { 
-                    console.log(`ERROR: SServer is unreachable. Failed to connect to Node ${node}`); 
+                    console.log(`ERROR: Server is unreachable. Failed to connect to Node ${node}`); 
                     console.log(error);
                 }
                 break;
@@ -55,11 +55,11 @@ const node_utils = {
             case 3: 
                 try {
                     let val = await node3.query('SELECT 3 AS solution');
-                    console.log(val[0][0].solution);
+                    console.log(`Successfully pinged Node ${node}: ${val[0][0].solution}`);
                     return true;
                 }
                 catch (error) { 
-                    console.log(`ERROR: SServer is unreachable. Failed to connect to Node ${node}`); 
+                    console.log(`ERROR: Server is unreachable. Failed to connect to Node ${node}`); 
                     console.log(error);
                 }
                 break;
